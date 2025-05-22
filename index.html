@@ -57,8 +57,8 @@
             padding: 2rem 1rem;
             position: relative;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Fixed background for better effect */
+            background-position: center center;
+            background-repeat: no-repeat;
         }
         
         .header-content {
@@ -154,7 +154,7 @@
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             font-weight: 700;
             text-decoration: none;
-            margin-bottom: 0.5rem;
+            flex-shrink: 0;
         }
         
         .nav-links {
@@ -162,7 +162,8 @@
             list-style: none;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.5rem;
+            margin-top: 0;
         }
         
         .nav-links li {
@@ -177,6 +178,7 @@
             font-size: clamp(0.9rem, 2vw, 1rem);
             padding: 0.5rem 1rem;
             border-radius: 5px;
+            white-space: nowrap;
         }
         
         .nav-links a:hover {
@@ -587,6 +589,10 @@
         @media (max-width: 768px) {
             header {
                 background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                background-color: #8ac7de; /* Fallback color */
             }
             
             .header-content {
@@ -596,11 +602,13 @@
             .nav-container {
                 flex-direction: column;
                 text-align: center;
+                gap: 1rem;
             }
             
             .nav-links {
-                margin-top: 1rem;
+                margin-top: 0;
                 justify-content: center;
+                width: 100%;
             }
             
             .day-header {
@@ -683,7 +691,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header style="background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('images/frontPage.jpg') center/cover no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+    <header style="background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('images/frontPage.jpg') center/contain no-repeat; background-size: contain; background-position: center top; background-color: #8ac7de;">
         <div class="header-content">
             <h1 class="title">Deeana's Bachelorette</h1>
             <h2 class="subtitle">Last Toast On The Coast</h2>
