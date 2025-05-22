@@ -46,7 +46,6 @@
         
         /* Header Styles */
         header {
-            background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -56,9 +55,17 @@
             color: var(--light-color);
             padding: 2rem 1rem;
             position: relative;
+            background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7));
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
+        }
+        
+        /* Background image will be set inline in HTML */
+        .header-with-image {
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
         }
         
         .header-content {
@@ -589,8 +596,6 @@
         @media (max-width: 768px) {
             header {
                 background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
-                background-size: cover !important;
-                background-position: center center !important;
             }
             
             .header-content {
@@ -654,14 +659,6 @@
             }
         }
         
-        /* Additional mobile-specific background adjustment */
-        @media (max-width: 480px) {
-            header {
-                background-size: cover !important;
-                background-position: center center !important;
-            }
-        }
-        
         @media (max-width: 480px) {
             section {
                 padding: 2rem 0.5rem;
@@ -697,7 +694,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header style="background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('images/frontPage.jpg') center/cover no-repeat; background-size: cover; background-position: center center;">
+    <header class="header-with-image" style="background-image: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('./images/frontPage.jpg');">
         <div class="header-content">
             <h1 class="title">Deeana's Bachelorette</h1>
             <h2 class="subtitle">Last Toast On The Coast</h2>
@@ -1090,4 +1087,3 @@
     </script>
 </body>
 </html>
-
