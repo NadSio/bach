@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -430,25 +431,26 @@
         .modal-header {
             margin-bottom: 15px;
             padding: 0 3rem 0 0;
+            text-align: center;
         }
         
         .modal-header h2 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem) !important;
-            text-align: center !important;
-            margin: 0 auto 1rem auto !important;
-            color: var(--primary-color) !important;
-            font-family: 'Delicate Flower', 'Dancing Script', cursive !important;
-            display: block !important;
-            width: 100% !important;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            text-align: center;
+            margin: 0 auto 1rem auto;
+            color: var(--primary-color);
+            font-family: 'Delicate Flower', 'Dancing Script', cursive;
+            display: block;
+            width: 100%;
         }
         
         .modal-header p {
-            font-size: clamp(1rem, 2.5vw, 1.1rem) !important;
-            text-align: center !important;
-            margin: 0 auto 1rem auto !important;
-            color: #666 !important;
-            display: block !important;
-            width: 100% !important;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            text-align: center;
+            margin: 0 auto 1rem auto;
+            color: #666;
+            display: block;
+            width: 100%;
         }
         
         .modal-body {
@@ -479,14 +481,14 @@
         }
         
         .modal-caption {
-            text-align: center !important;
+            text-align: center;
             font-style: italic;
             margin-top: 15px;
             color: #777;
             font-size: clamp(0.9rem, 2vw, 1rem);
             padding: 10px;
             width: 100%;
-            display: block !important;
+            display: block;
         }
         
         /* Countdown */
@@ -794,61 +796,6 @@
                     <div class="event">
                         <div class="event-time">11:30 AM - 4:00 PM</div>
                         <div class="event-title">Check-In & Setup</div>
-                        <div class="event-details">Early arrival team (Nadia and Sevanna) - Decorating the Airbnb</div>
-                    </div>
-                    <div class="event">
-                        <div class="event-time">5:00 PM</div>
-                        <div class="event-title">All Guests Arrive</div>
-                        <div class="event-details">Welcome, champagne toast, goodie bags</div>
-                    </div>
-                    <div class="event">
-                        <div class="event-time">5:00 PM - 6:30 PM</div>
-                        <div class="event-title">Chill Time & Get Ready</div>
-                        <div class="event-details">Everyone gets settled, champagne pop for Deeana, get changed for dinner</div>
-                    </div>
-                    <div class="event">
-                        <div class="event-time">6:30 PM - 7:45 PM</div>
-                        <div class="event-title">Pre-Dinner Games</div>
-                        <div class="event-details">Board game blue drinking game from Etsy</div>
-                    </div>
-                    <div class="event">
-                        <div class="event-time">8:00 PM - 9:30 PM</div>
-                        <div class="event-title">Dinner at Tomasso's Italian Grille</div>
-                        <div class="event-details">Reserved under Nadia Sioufi, 7 min from Airbnb</div>
-                        <div class="event-note">Parking available next to restaurant, option for riverside walk and photos</div>
-                    </div>
-                    <div class="event">
-                        <div class="event-time">10:00 PM - Late</div>
-                        <div class="event-title">Game Night at Airbnb</div>
-                        <div class="event-details">Drinks, snacks, and fun bachelorette games:</div>
-                        <ul>
-                            <li>"What did the groom say?" drinking game</li>
-                            <li>What would the bride rather?</li>
-                            <li>What's in your phone?</li>
-                            <li>Which Era? Deeana throughout the years</li>
-                            <li>Guess the secret</li>
-                            <li>Bachelorette Jeopardy</li>
-                            <li>Ring Hunt</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Day 2 -->
-            <div class="day">
-                <div class="day-header">
-                    <span>Saturday, June 28</span>
-                    <span class="day-theme" onclick="openModal('saturday-day')">Theme: GARDEN FLORAL/NATURE (Day)</span>
-                </div>
-                <div class="day-content">
-                    <div class="event">
-                        <div class="event-time">11:00 AM - 1:00 PM</div>
-                        <div class="event-title">Breakfast at Birdy's Fine Casual Dining</div>
-                        <div class="event-details">Leaving at 10:45, 7 min drive, parking available in front</div>
-                    </div>
-                    <div class="event">
-                        <div class="event-time">1:30 PM - 2:30 PM</div>
-                        <div class="event-title">First Winery: Rosehall Run Vineyards</div>
                         <div class="event-details">32 min from breakfast place, parking available in lot</div>
                     </div>
                     <div class="event">
@@ -1063,25 +1010,25 @@
             if (day === 'friday') {
                 modalTitle.textContent = 'Friday Night: ALL BLACK, BRIDE IN WHITE';
                 modalDescription.textContent = 'Everyone wears black, while the bride stands out in white!';
-                modalImage.src = 'images/allBlack.jpg';
+                modalImage.src = '/api/placeholder/600/800';
                 modalImage.alt = 'All Black Outfit Inspiration';
                 modalCaption.textContent = 'Outfit inspiration for our night out!';
             } else if (day === 'saturday-day') {
                 modalTitle.textContent = 'Saturday Day: GARDEN FLORAL/NATURE';
                 modalDescription.textContent = 'Floral prints and pastels perfect for our winery tour!';
-                modalImage.src = 'images/floralGarden.jpg';
+                modalImage.src = '/api/placeholder/600/800';
                 modalImage.alt = 'Garden Floral Outfit Inspiration';
                 modalCaption.textContent = 'Floral inspiration for our winery adventures!';
             } else if (day === 'saturday-night') {
                 modalTitle.textContent = 'Saturday Night: COASTAL COWGIRL';
                 modalDescription.textContent = 'Western meets beach vibes for our barn party!';
-                modalImage.src = 'images/coastalCowgirl.jpg';
+                modalImage.src = '/api/placeholder/600/800';
                 modalImage.alt = 'Coastal Cowgirl Outfit Inspiration';
                 modalCaption.textContent = 'Get ready to dance the night away!';
             } else if (day === 'sunday') {
                 modalTitle.textContent = 'Sunday: SOMETHING BLUE';
                 modalDescription.textContent = 'Any shade of blue for our beach day!';
-                modalImage.src = 'images/somethingBlue.jpg';
+                modalImage.src = '/api/placeholder/600/800';
                 modalImage.alt = 'Something Blue Outfit Inspiration';
                 modalCaption.textContent = 'Perfect blues for our final day by the water!';
             }
