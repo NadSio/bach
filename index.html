@@ -430,14 +430,21 @@
         .modal-header {
             margin-bottom: 15px;
             padding-right: 3rem;
+            text-align: center;
         }
         
         .modal-header h2 {
             font-size: clamp(1.5rem, 4vw, 2.2rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-family: 'Delicate Flower', 'Dancing Script', cursive;
         }
         
         .modal-header p {
             font-size: clamp(1rem, 2.5vw, 1.1rem);
+            text-align: center;
+            margin-bottom: 1rem;
         }
         
         .modal-body {
@@ -994,8 +1001,8 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
             <div class="modal-header">
-                <h2 id="modal-title" style="text-align: center; margin-bottom: 1rem; color: var(--primary-color); font-family: 'Delicate Flower', 'Dancing Script', cursive;"></h2>
-                <p id="modal-description" style="text-align: center; margin-bottom: 1rem;"></p>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
             </div>
             <div class="modal-body">
                 <div class="modal-image-container">
