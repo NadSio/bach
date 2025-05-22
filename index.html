@@ -405,6 +405,7 @@
             background-color: var(--light-color);
             border-radius: var(--border-radius);
             position: relative;
+            top: 0;
             overflow: auto;
             box-shadow: var(--box-shadow);
             border: 1px solid rgba(211, 211, 211, 0.4);
@@ -428,18 +429,25 @@
         }
         
         .modal-header {
-            margin-bottom: 15px;
-            padding-right: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-        
-        .modal-header h2 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
+
+        .modal-header h2,
+        .modal-header p,
+        .modal-body p {
+            max-width: 90%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
+
         .modal-header p {
             font-size: clamp(1rem, 2.5vw, 1.1rem);
         }
-        
+
         .modal-body {
             flex: 1;
             display: flex;
@@ -663,7 +671,7 @@
             
             .outfit-header {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
         }
         
