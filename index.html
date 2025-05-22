@@ -589,10 +589,8 @@
         @media (max-width: 768px) {
             header {
                 background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
-                background-size: contain;
-                background-position: center top;
-                background-repeat: no-repeat;
-                background-color: #8ac7de; /* Fallback color */
+                background-size: cover !important;
+                background-position: center center !important;
             }
             
             .header-content {
@@ -656,6 +654,14 @@
             }
         }
         
+        /* Additional mobile-specific background adjustment */
+        @media (max-width: 480px) {
+            header {
+                background-size: cover !important;
+                background-position: center center !important;
+            }
+        }
+        
         @media (max-width: 480px) {
             section {
                 padding: 2rem 0.5rem;
@@ -691,7 +697,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header style="background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('images/frontPage.jpg') center/contain no-repeat; background-size: contain; background-position: center top; background-color: #8ac7de;">
+    <header style="background: linear-gradient(rgba(138, 199, 222, 0.8), rgba(255, 173, 199, 0.7)), url('images/frontPage.jpg') center/cover no-repeat; background-size: cover; background-position: center center;">
         <div class="header-content">
             <h1 class="title">Deeana's Bachelorette</h1>
             <h2 class="subtitle">Last Toast On The Coast</h2>
