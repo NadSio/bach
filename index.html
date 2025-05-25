@@ -171,7 +171,7 @@
             padding: 0;
             flex-wrap: nowrap;
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+            white-space: nowrap;
         }
 
         .nav-links::-webkit-scrollbar {
@@ -621,14 +621,16 @@
             .nav-container {
                 flex-direction: column;
                 text-align: center;
-                gap: 1.5rem;
+                gap: 1rem;
             }
-            
+
             .nav-links {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
                 gap: 0.75rem;
                 width: 100%;
-                align-items: center;
+                flex-wrap: nowrap;
+                overflow-x: auto;
             }
             
             .nav-links a {
